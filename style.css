@@ -12,10 +12,11 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    padding-bottom: 64px;
 }
 
 #background-canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -47,6 +48,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 64px;
+    color: black;
+    text-decoration: none;
 }
 
 .menu-button:hover, .menu-button:focus {
@@ -58,6 +61,7 @@ body {
     flex-direction: row;
     padding: 0px 64px;
     flex: 1;
+    justify-content: center;
 }
 
 .content>* {
@@ -114,4 +118,84 @@ body {
     border-radius: 50%;
     border: 1px solid #dcdcdc;
     background: white; 
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+}
+
+.paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 64px;
+    background: white;
+    border-radius: 32px;
+    max-width: 1200px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+}
+
+.paper h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.paper section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.paper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.paper ul li {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.paper ul li .year {
+    flex: 0 0 128px;
+    height: 100%;
+
+}
+
+.paper .cv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: justify;
+}
+
+.paper .primaty {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.paper .secondary {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.error-icon {
+    width: 320px;
+    height: 320px;
+}
+
+.error-text {
+    font-size: 1.5em;
 }
